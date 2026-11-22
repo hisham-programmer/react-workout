@@ -5,10 +5,10 @@ function App() {
 
 
   return (
-    <div>
+    <>
     <Navbar/>
     <Course/>
-    </div>
+    </>
 
   
   )
