@@ -39,9 +39,11 @@ function CourseList(){
           console.log("useEffect called");
           console.log(dummy);  
           fetch('https://jsonplaceholder.typicode.com/posts')
-          .then(response =>{console.log(response)})
-        },[courses]
-    );  
+          .then(response =>{console.log(response);
+                return response.json();
+          }).then(
+            data =>console.log(data))
+        },[]);  
     function handledelete(id){
         let newcourses=courses.filter((course)=>course.id!=id);
         setcourses(newcourses);
